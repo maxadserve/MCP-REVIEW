@@ -1,0 +1,139 @@
+<svg viewBox="0 0 1200 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#333" />
+    </marker>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">AI Code Review Workflow</text>
+  
+  <!-- Start -->
+  <circle cx="600" cy="100" r="30" fill="#4CAF50" filter="url(#shadow)"/>
+  <text x="600" y="105" text-anchor="middle" fill="white" font-weight="bold">Start</text>
+  
+  <!-- Step 1: CD into repo -->
+  <rect x="450" y="170" width="300" height="80" rx="10" fill="#2196F3" filter="url(#shadow)"/>
+  <text x="600" y="205" text-anchor="middle" fill="white" font-weight="bold">1. Navigate to Repository</text>
+  <text x="600" y="225" text-anchor="middle" fill="white" font-size="14">cd /path/to/repo</text>
+  
+  <!-- Step 2: Pull target branch -->
+  <rect x="450" y="290" width="300" height="80" rx="10" fill="#2196F3" filter="url(#shadow)"/>
+  <text x="600" y="320" text-anchor="middle" fill="white" font-weight="bold">2. Pull Target Branch</text>
+  <text x="600" y="340" text-anchor="middle" fill="white" font-size="14">git checkout main &amp;&amp; git pull</text>
+  
+  <!-- Decision: Frontend or Backend -->
+  <polygon points="600,410 700,460 600,510 500,460" fill="#FF9800" filter="url(#shadow)"/>
+  <text x="600" y="465" text-anchor="middle" fill="white" font-weight="bold">Frontend or</text>
+  <text x="600" y="485" text-anchor="middle" fill="white" font-weight="bold">Backend?</text>
+  
+  <!-- Frontend Path -->
+  <rect x="250" y="560" width="250" height="80" rx="10" fill="#9C27B0" filter="url(#shadow)"/>
+  <text x="375" y="590" text-anchor="middle" fill="white" font-weight="bold">3a. Run Frontend Review</text>
+  
+  <!-- Backend Path -->
+  <rect x="700" y="560" width="250" height="80" rx="10" fill="#673AB7" filter="url(#shadow)"/>
+  <text x="825" y="590" text-anchor="middle" fill="white" font-weight="bold">3b. Run Backend Review</text>
+  
+  <!-- Post AI Comments -->
+  <rect x="450" y="690" width="300" height="80" rx="10" fill="#FF5722" filter="url(#shadow)"/>
+  <text x="600" y="720" text-anchor="middle" fill="white" font-weight="bold">4. Post AI Review Comments</text>
+  <text x="600" y="740" text-anchor="middle" fill="white" font-size="14">Add to PR</text>
+  
+  <!-- Pass/Fail Decision -->
+  <polygon points="600,810 700,860 600,910 500,860" fill="#FF9800" filter="url(#shadow)"/>
+  <text x="600" y="865" text-anchor="middle" fill="white" font-weight="bold">Review</text>
+  <text x="600" y="885" text-anchor="middle" fill="white" font-weight="bold">Passed?</text>
+  
+  <!-- Generate Documentation -->
+  <rect x="450" y="960" width="300" height="80" rx="10" fill="#4CAF50" filter="url(#shadow)"/>
+  <text x="600" y="990" text-anchor="middle" fill="white" font-weight="bold">5. Generate Documentation</text>
+  <text x="600" y="1010" text-anchor="middle" fill="white" font-size="14">AI-assisted docs &amp; comments</text>
+  
+  <!-- Backend Only: API Check -->
+  <polygon points="600,1080 700,1130 600,1180 500,1130" fill="#FF9800" filter="url(#shadow)"/>
+  <text x="600" y="1130" text-anchor="middle" fill="white" font-weight="bold">Backend:</text>
+  <text x="600" y="1150" text-anchor="middle" fill="white" font-weight="bold">API Changes?</text>
+  
+  <!-- Update API Docs -->
+  <rect x="700" y="1220" width="250" height="80" rx="10" fill="#3F51B5" filter="url(#shadow)"/>
+  <text x="825" y="1250" text-anchor="middle" fill="white" font-weight="bold">6. Update API Docs</text>
+  <text x="825" y="1270" text-anchor="middle" fill="white" font-size="14">OpenAPI/Swagger</text>
+  
+  <!-- End -->
+  <circle cx="600" cy="1360" r="30" fill="#4CAF50" filter="url(#shadow)"/>
+  <text x="600" y="1365" text-anchor="middle" fill="white" font-weight="bold">End</text>
+  
+  <!-- Arrows -->
+  <!-- Start to Step 1 -->
+  <line x1="600" y1="130" x2="600" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 1 to Step 2 -->
+  <line x1="600" y1="250" x2="600" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2 to Decision -->
+  <line x1="600" y1="370" x2="600" y2="410" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Decision to Frontend -->
+  <line x1="550" y1="460" x2="425" y2="560" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="480" y="510" text-anchor="middle" fill="#333" font-weight="bold">Frontend</text>
+  
+  <!-- Decision to Backend -->
+  <line x1="650" y1="460" x2="775" y2="560" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="720" y="510" text-anchor="middle" fill="#333" font-weight="bold">Backend</text>
+  
+  <!-- Frontend to Post Comments -->
+  <line x1="375" y1="640" x2="500" y2="690" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Backend to Post Comments -->
+  <line x1="825" y1="640" x2="700" y2="690" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Post Comments to Pass/Fail -->
+  <line x1="600" y1="770" x2="600" y2="810" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Pass/Fail to Generate Docs (Pass) -->
+  <line x1="600" y1="910" x2="600" y2="960" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="630" y="935" text-anchor="middle" fill="#333" font-weight="bold">Pass</text>
+  
+  <!-- Fail back to Frontend/Backend decision -->
+  <path d="M 500 860 Q 25 460 500 460" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <text x="200" y="660" text-anchor="middle" fill="#333" font-weight="bold">Fail - Return to</text>
+  <text x="200" y="680" text-anchor="middle" fill="#333" font-weight="bold">Service Review</text>
+  
+  <!-- Documentation to Backend Check -->
+  <line x1="600" y1="1040" x2="600" y2="1080" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Backend Check to API Update -->
+  <line x1="650" y1="1155" x2="750" y2="1220" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="700" y="1190" text-anchor="middle" fill="#333" font-weight="bold">Yes</text>
+  
+  <!-- Backend Check to End (No) -->
+  <line x1="550" y1="1155" x2="580" y2="1330" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="530" y="1240" text-anchor="middle" fill="#333" font-weight="bold">No/Frontend</text>
+  
+  <!-- API Update to End -->
+  <line x1="825" y1="1300" x2="620" y2="1340" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="50" width="300" height="120" rx="5" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="60" y="70" font-size="14" font-weight="bold" fill="#333">Legend:</text>
+  <rect x="60" y="80" width="80" height="20" rx="5" fill="#2196F3"/>
+  <text x="150" y="95" font-size="12" fill="#333">Setup Steps</text>
+  <rect x="60" y="105" width="80" height="20" rx="5" fill="#9C27B0"/>
+  <text x="150" y="120" font-size="12" fill="#333">Review Commands</text>
+  <rect x="60" y="130" width="80" height="20" rx="5" fill="#4CAF50"/>
+  <text x="150" y="145" font-size="12" fill="#333">Documentation Steps</text>
+  
+  <!-- Notes -->
+  <rect x="850" y="50" width="300" height="160" rx="5" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="860" y="70" font-size="14" font-weight="bold" fill="#333">Key Points:</text>
+  <text x="860" y="95" font-size="12" fill="#333">• Comments posted first</text>
+  <text x="860" y="115" font-size="12" fill="#333">• Pass/fail after review</text>
+  <text x="860" y="135" font-size="12" fill="#333">• Service-specific re-review</text>
+  <text x="860" y="155" font-size="12" fill="#333">• API contract validation</text>
+  <text x="860" y="175" font-size="12" fill="#333">• Automated documentation</text>
+  <text x="860" y="195" font-size="12" fill="#333">• Single responsibility focus</text>
+</svg>
