@@ -135,24 +135,6 @@ Content-Type: application/json
 - Caching behavior
 - Dependencies on other services
 
-### Example Usage
-
-```javascript
-// Example client code
-const response = await fetch('/api/endpoint', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer your-token'
-  },
-  body: JSON.stringify({
-    // request data
-  })
-});
-
-const data = await response.json();
-```
-
 ---
 
 ## Documentation Guidelines
@@ -160,7 +142,7 @@ const data = await response.json();
 1. **Consistency**: Always follow this template structure
 2. **Completeness**: Include all parameters, responses, and error conditions
 3. **Clarity**: Use clear, concise descriptions
-4. **Examples**: Provide realistic examples with actual data structures
+4. **Examples**: Provide realistic examples with actual data structures in JSON
 5. **Testing**: Include comprehensive test cases covering success and failure scenarios
 6. **Maintenance**: Keep documentation updated with code changes
 
@@ -173,5 +155,5 @@ Before publishing API documentation, ensure:
 - [ ] Request/response examples are valid JSON
 - [ ] Authentication requirements are clearly stated
 - [ ] Error scenarios are thoroughly documented
-- [ ] Test cases cover both success and failure paths
+- [ ] Test cases cover both success and failure paths and at least 10 test cases are documented
 - [ ] Implementation notes address any special considerations
